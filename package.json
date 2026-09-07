@@ -1,0 +1,12 @@
+{
+  "name": "millionballs-clone",
+  "version": "1.0.0",
+  "description": "MillionBalls pool simulator clone with memory leak fixes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["pool", "billiards", "simulator", "threejs", "vue"],
+  "author": "",
+  "license": "ISC"
+}
