@@ -49476,7 +49476,7 @@ const jk = ["onClick"],
       },
       {
         path: "/layout-tagger/upload",
-        component: () => xl(() => import("./LayoutUploader-CToJ9Yi4.js"), []),
+        component: GF,
       },
       {
         path: "/target-area-survey/",

@@ -1,0 +1,73 @@
+{
+    "steps": [
+    {
+        "html": "In this tutorial you will learn to use touchscreen controls to move around and make basic shots.  If you are not on a touchscreen device, go to the <a href=\"keyboard-basics\" class=\"accent\">keyboard tutorial</a> instead.",
+        "layout": {
+            "unit": "in",
+            "balls": [
+                {
+                    "type": "cue_ball",
+                    "position": [8.5, 25]
+                }, {
+                    "type": 9,
+                    "position": [-12.5, 43.75]
+                }
+            ]
+        },
+        "goal": {
+            "ball": 9,
+            "pocket": "top-left"
+        }
+    },
+    {
+        "html": "First, we need to make sure you are seeing the table as you would in real life. Let's configure the simulator to match your physical height.",
+        "action": "set-height"
+    },
+    {
+        "html": "Experts recommend aiming shots while standing upright, before you get down into a shooting stance.  This gives you the best view of the table and avoid many optical illusions that occur when you are low to the table."
+    },
+    {
+        "html": "MillionBalls mimics this real-life action.  When preparing to shoot, you'll move from side-to-side around the cue ball to find the right line of aim to the object ball."
+    },
+    {
+        "html": "The movement control joystick <strong><i class=\"far fa-arrows-to-dot\"></i></strong> is enabled now.  Touch and hold the joystick with your thumb and drag it left or right to move around. Release it to stop moving.",
+        "enableControls": ["move"],
+        "action": "move"
+    },
+    {
+        "html": "Movement speed is controlled by how far you drag the joystick control.  Drag it just a little to move slowly, drag it more to move faster. Try it now.",
+        "enableControls": ["move"],
+        "action": "move"
+    },
+    {
+        "html": "Good players aim while standing up.  When they are ready to shoot they drop down into a shooting stance and place the cue directly along the line of aim."
+    },
+    {
+        "html": "When you are ready, tap the joystick to get down.  Don't worry if you are unsure of the aim.  We'll cover that in a future tutorial.",
+        "enableControls": ["move", "get-down"],
+        "action": "get-down"
+    },
+    {
+        "html": "Joystick has changed to <strong><i class=\"far fa-hand-back-fist\"></i></strong>, representing the hand holding the cue.  You can use this to make fine adjustments to your aim. Try this now",
+        "action": "adjust-grip",
+        "enableControls": ["move", "get-down", "fine-aim"]
+    },
+    {
+        "html": "It's inadvisable to make large adjustments while down in the shooting stance.  If you feel like your aim is really off, tap the <strong><i class=\"far fa-hand-back-fist\"></i></strong> joystick to get back up.  Try it now.",
+        "action": "stand-up",
+        "enableControls": ["get-down", "fine-aim", "stand-up"]
+    },
+    {
+        "html": "Now, try to aim and get down on this shot to make the ball. Again, don't worry if you're unsure of the aim.  In this tutorial we're just learning the controls.",
+        "action": "get-down",
+        "enableControls": ["move", "get-down", "fine-aim"]
+    },
+    {
+        "html": "Now you see the <strong><i class=\"far fa-bullseye-arrow\"></i></strong> button.  Tap that button to take the shot.",
+        "enableControls": ["move", "get-down", "stand-up", "fine-aim", "shoot"],
+        "action": "shoot"
+    },
+    {
+        "html": "<h1>Review</h1>This concludes the tutorial on basic touchscreen controls. <ul><li>You learned to move around and aim shots while standing up.</li><li>You learned to fine-tune your aim</li><li>You learned to get back up to make large adjustments to your aim</li><li>You learned how to shoot a basic shot</li></ul>"
+    }
+]}

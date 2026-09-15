@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MillionBalls</title>
+  <script>
+    var l = window.location;
+    var parts = l.pathname.split('/').filter(Boolean);
+    // If under /<repo>/..., keep the first segment as the repo name
+    var repo = parts.length > 0 ? '/' + parts[0] : '';
+    var subPath = l.pathname.slice(repo.length);
+    if (!subPath.startsWith('/')) subPath = '/' + subPath;
+    var target = l.protocol + '//' + l.host + repo + '/#' + subPath + (l.search || '') + (l.hash || '');
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  Redirecting to MillionBalls...
+</body>
+</html>

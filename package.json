@@ -1,12 +1,31 @@
 {
   "name": "millionballs-clone",
   "version": "1.0.0",
+  "type": "module",
   "description": "MillionBalls pool simulator clone with memory leak fixes",
   "main": "server.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "node server.js"
   },
-  "keywords": ["pool", "billiards", "simulator", "threejs", "vue"],
+  "keywords": [
+    "pool",
+    "billiards",
+    "simulator",
+    "threejs",
+    "vue"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.9",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "three": "^0.186.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  }
 }
