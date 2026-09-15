@@ -5188,13 +5188,123 @@ function l0(e, t, n) {
   }
   return t;
 }
+
+const __EMBEDDED_DRILLS = [{"id":1,"name":"Down the rail cut: medium distance","description":"The 1 ball is about two diamonds away from the pocket and a couple of ball-widths away from the long rail there is a modest cut angle.  Although the ball can be pocketed off the long at soft to medium speeds, it's crucial to able to cut the ball cleanly to allow for accurate position play.","layout":{"balls":[{"type":"cue_ball","position":{"x":0,"y":-12.5}},{"type":1,"position":{"x":-20,"y":25}}],"table":{"todo":"Figure out config"}},"goal":{"ball":1,"pocket":"top-left"},"favorite":null,"easier_drill":9,"harder_drill":10,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-1.png","image_width":1000,"image_height":553},{"id":2,"name":"Back-cut: Medium distance","description":"In this drill, the cue ball is in line with the object ball, about a diamond away from the long rail. This requires a slight back-cut but should be a high-percentage shot.","layout":{"balls":[{"type":"cue_ball","position":{"x":-12.5,"y":-15}},{"type":9,"position":{"x":-10,"y":20}}]},"goal":{"ball":9,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":6,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-2.png","image_width":1000,"image_height":553},{"id":3,"name":"Spot-to-spot shot","description":"The object ball is on the foot spot, cue ball on the head spot. Your goal is to shoot the ball into the top-left pocket.  This is a fairly challenging shot for most players.","layout":{"balls":[{"type":3,"position":{"x":0,"y":25}},{"type":"cue_ball","position":{"x":0,"y":-25}}]},"goal":{"ball":3,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-3.png","image_width":1000,"image_height":553},{"id":4,"name":"Money ball in corner","description":"This shot comes up frequently in 8-ball and 9-ball games.  The money ball in the position where it's racked (a little below the head spot), and the cue ball is mid-table near the side rail. Good players should be able to pot this ball with confidence, but a lot of beginner-to-intermediate players can miss this shot and lose winnable games.","layout":{"balls":[{"type":"cue_ball","position":{"x":-20.5,"y":0}},{"type":9,"position":{"x":0,"y":28.89}}]},"goal":{"ball":9,"pocket":"top-right"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-4.png","image_width":1000,"image_height":553},{"id":5,"name":"Back-cut: Long distance","description":"This is a more difficult version of the back cut drill. Because of the bigger back-cut angle and longer distance. However, this is a shot that should be in most players repertoire.","layout":{"balls":[{"type":"cue_ball","position":{"x":-15,"y":-25}},{"type":9,"position":{"x":-12.5,"y":0}}]},"goal":{"ball":9,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-5.png","image_width":1000,"image_height":553},{"id":6,"name":"Routine Cut Shot","description":"This is a straightforward cut shot to a corner pocket.  This should be a very high percentage shot but many player will undercut this shot by failing to account for cut-induced throw.  At low speeds, the ball can be pocketed off the long rail, but this greatly limits position-play options.  Aiming the ball cleanly and avoiding the rails will allow it to be pocketed at a wide range of speeds.","layout":{"balls":[{"type":"cue_ball","position":{"x":12.5,"y":12.5}},{"type":5,"position":{"x":-10,"y":25}}]},"goal":{"ball":5,"pocket":"top-left"},"favorite":null,"easier_drill":2,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-6.png","image_width":1000,"image_height":553},{"id":7,"name":"Tutorial: Basic cut shot","description":"Basic cut shot from the tutorial.  Even beginners will quickly learn to make this shot with a high success rate.","layout":{"balls":[{"type":9,"position":{"x":-12.5,"y":43.75}},{"type":"cue_ball","position":{"x":8.5,"y":25}}]},"goal":{"ball":9,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-7.png","image_width":1000,"image_height":553},{"id":8,"name":"Experiment: Corner Cut","description":"Test shot to validate that MillionBalls can teach real skills.","layout":{"balls":[{"type":8,"position":{"x":-12.5,"y":37.5}},{"type":"cue_ball","position":{"x":4.7,"y":36.125}}]},"goal":{"ball":8,"pocket":"top-left"},"favorite":null,"easier_drill":11,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-8.png","image_width":1000,"image_height":553},{"id":9,"name":"Down the rail cut: short distance","description":"The 1 ball is close to the long rail about a diamond from the pocket. Although the ball can be pocketed off the long at soft to medium speeds, it's crucial to able to cut the ball cleanly to allow for accurate position play.","layout":{"balls":[{"type":1,"position":{"x":-21.73048734710287,"y":37.08141741997103}},{"type":"cue_ball","position":{"x":-1.651931791439965,"y":-0.2851576407390307}}],"table":{"todo":"Figure out config"}},"goal":{"ball":1,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":1,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-9.png","image_width":1000,"image_height":553},{"id":10,"name":"Down the rail cut: long distance","description":"The 1 ball is about three diamonds away from the pocket and a couple of ball-widths away from the long rail with a modest cut angle.  Although the ball can be pocketed off the long at soft to medium speeds, it's crucial to able to cut the ball cleanly to allow for accurate position play.","layout":{"balls":[{"type":1,"position":{"x":-20.354042681035185,"y":10.4060211617046}},{"type":"cue_ball","position":{"x":3.559067848059582,"y":-30.497890404273925}}],"table":{"todo":"Figure out config"}},"goal":{"ball":1,"pocket":"top-left"},"favorite":null,"easier_drill":1,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-10.png","image_width":1000,"image_height":553},{"id":11,"name":"Corner Cut - Shallower Version","description":"Easier version of the Corner Cut experiment shot.","layout":{"balls":[{"type":8,"position":{"x":-12.5,"y":37.5}},{"type":"cue_ball","position":{"x":4.634389946263722,"y":32.39861794096624}}]},"goal":{"ball":8,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":8,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-11.png","image_width":1000,"image_height":553},{"id":12,"name":"Routine Cut Shot - Level 2","description":"This is a straightforward cut shot to a corner pocket.  This should be a very high percentage shot but many player will undercut this shot by failing to account for cut-induced throw.  At low speeds, the ball can be pocketed off the long rail, but this greatly limits position-play options.  Aiming the ball cleanly and avoiding the rails will allow it to be pocketed at a wide range of speeds.","layout":{"balls":[{"type":5,"position":{"x":-10,"y":25}},{"type":"cue_ball","position":{"x":10.994317180034383,"y":9.416678099843178}}]},"goal":{"ball":5,"pocket":"top-left"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-12.png","image_width":1000,"image_height":553},{"id":14,"name":"Cut down the rail","description":"The 1-ball is close to the rail.  Cut it into the corner pocket.","layout":{"balls":[{"type":1,"position":{"x":-0.2336815872291882,"y":47.059339851242086}},{"type":"cue_ball","position":{"x":-19.235921471994008,"y":28.936436735763436}}]},"goal":{"ball":1,"pocket":"top-right"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-14.png","image_width":1000,"image_height":553},{"id":15,"name":"Cut to far corner","description":"Cut the 9-ball into the far corner","layout":{"balls":[{"type":9,"position":{"x":18.95051131567769,"y":-23.675082625162485}},{"type":"cue_ball","position":{"x":14.59709957678067,"y":-42.995065871965664}}]},"goal":{"ball":9,"pocket":"top-right"},"favorite":null,"easier_drill":null,"harder_drill":null,"editable":false,"achievements":[],"image":"https://millionballs.app/uploads/drills/drill-15_I5EkqwI.png","image_width":1000,"image_height":553}];
+const __EMBEDDED_TUTORIALS = {"basic-concepts":{"steps":[{"html":"<p>In this tutorial, you will learn some basic pool concepts and terminology. You will learn what it means to hit the ball <em>full</em> and to <em>cut</em> the ball.  You'll learn what it means to <em>undercut</em> and <em>overcut</em>.</p>","layout":{"unit":"in","balls":[{"type":"cue_ball","position":[8.5,25]},{"type":9,"position":[-12.5,40.5]}]},"goal":{"ball":9,"pocket":"top-left"}},{"html":"The most basic skill in pool is to strike the white <em>cue ball</em> with a <em>cue</em> and drive an <em>object ball</em> (9-ball in this case) into a pocket.","show":["target"]},{"html":"<p>If the cue ball and object ball are perfectly lined up with the pocket, you can make the ball simply by aiming directly at the center of the object ball.  this is called a <em>full hit</em>.</p><p>With a full hit the cue ball hits the object ball head-on and the object ball will travel along the same line after the collision.</p>","show":["target"]},{"html":"Watch this demonstration of a full hit.","demonstrateShot":{"angle":0,"speed":1.25}},{"html":"In most cases, the balls are not lined up perfectly, and you need to send the object ball a bit to to one side or another.<ul><li>If the cue ball strikes the object ball to the right of center, the object ball will go to the left.</li><li>If the cue ball strikes the object ball to the left of center, the object ball will go to the right.</li></ul>This is called a <em>cut shot</em>.","layout":{"unit":"in","balls":[{"type":"cue_ball","position":[8.5,25]},{"type":9,"position":[-12.5,43.75]}]},"goal":{"ball":9,"pocket":"top-left"},"show":["target"]},{"html":"In this case, we need to cut the 9-ball to the left, so we'll aim the cue ball a bit to the right of the center of the object ball.  Here's a demonstration.","demonstrateShot":{"angle":-1.25,"speed":1.5},"show":["target","result"]},{"html":"If you hit the object too far off-center, the object ball will deflect too much.  This is called an <strong>overcut</strong>.","demonstrateShot":{"angle":-2,"speed":1.25},"show":["result"]},{"html":"If you don't hit the object off-center enough, the object ball won't deflect enough.  This is called an <strong>undercut</strong>.","demonstrateShot":{"angle":-0.5,"speed":1.25},"show":["result"]},{"html":"It takes judgment and practice to learn just how far off-center the cue ball must strike the object ball for a given shot. MillionBalls helps you learn to visualize shots correctly."},{"html":"<h1>Review</h1>In this tutorial you learned the concept of a basic cut shot. <ul><li>To send the object ball to the left, the cue ball must strike the object ball to the right of center</li><li>To send the object ball to the right, the cue ball must strike the object ball to the left of center</li><li>If the object ball deflects too much, this is an overcut and you correct by aiming closer to the center of the object ball</li><li>If the object ball doesn't deflect enough, this is an undercut and you correct by aiming further from the center of the object ball</li></ul><p>You will learn the controls in the next tutorial.</p>"}]},"touchscreen-basics":{"steps":[{"html":"In this tutorial you will learn to use touchscreen controls to move around and make basic shots.  If you are not on a touchscreen device, go to the <a href=\"keyboard-basics\" class=\"accent\">keyboard tutorial</a> instead.","layout":{"unit":"in","balls":[{"type":"cue_ball","position":[8.5,25]},{"type":9,"position":[-12.5,43.75]}]},"goal":{"ball":9,"pocket":"top-left"}},{"html":"First, we need to make sure you are seeing the table as you would in real life. Let's configure the simulator to match your physical height.","action":"set-height"},{"html":"Experts recommend aiming shots while standing upright, before you get down into a shooting stance.  This gives you the best view of the table and avoid many optical illusions that occur when you are low to the table."},{"html":"MillionBalls mimics this real-life action.  When preparing to shoot, you'll move from side-to-side around the cue ball to find the right line of aim to the object ball."},{"html":"The movement control joystick <strong><i class=\"far fa-arrows-to-dot\"></i></strong> is enabled now.  Touch and hold the joystick with your thumb and drag it left or right to move around. Release it to stop moving.","enableControls":["move"],"action":"move"},{"html":"Movement speed is controlled by how far you drag the joystick control.  Drag it just a little to move slowly, drag it more to move faster. Try it now.","enableControls":["move"],"action":"move"},{"html":"Good players aim while standing up.  When they are ready to shoot they drop down into a shooting stance and place the cue directly along the line of aim."},{"html":"When you are ready, tap the joystick to get down.  Don't worry if you are unsure of the aim.  We'll cover that in a future tutorial.","enableControls":["move","get-down"],"action":"get-down"},{"html":"Joystick has changed to <strong><i class=\"far fa-hand-back-fist\"></i></strong>, representing the hand holding the cue.  You can use this to make fine adjustments to your aim. Try this now","action":"adjust-grip","enableControls":["move","get-down","fine-aim"]},{"html":"It's inadvisable to make large adjustments while down in the shooting stance.  If you feel like your aim is really off, tap the <strong><i class=\"far fa-hand-back-fist\"></i></strong> joystick to get back up.  Try it now.","action":"stand-up","enableControls":["get-down","fine-aim","stand-up"]},{"html":"Now, try to aim and get down on this shot to make the ball. Again, don't worry if you're unsure of the aim.  In this tutorial we're just learning the controls.","action":"get-down","enableControls":["move","get-down","fine-aim"]},{"html":"Now you see the <strong><i class=\"far fa-bullseye-arrow\"></i></strong> button.  Tap that button to take the shot.","enableControls":["move","get-down","stand-up","fine-aim","shoot"],"action":"shoot"},{"html":"<h1>Review</h1>This concludes the tutorial on basic touchscreen controls. <ul><li>You learned to move around and aim shots while standing up.</li><li>You learned to fine-tune your aim</li><li>You learned to get back up to make large adjustments to your aim</li><li>You learned how to shoot a basic shot</li></ul>"}]},"keyboard-basics":{"steps":[{"html":"<p>In this tutorial you will learn to use keyboard controls to move around and make basic shots.  If you don't have a physical keyboard, go to the <a href=\"touchscreen-basics\" class=\"accent\">touchscreen tutorial</a> instead.</p><p>To begin, press the button below or just hit the <strong>N</strong> key.","layout":{"unit":"in","balls":[{"type":"cue_ball","position":[8.5,25]},{"type":9,"position":[-12.5,43.75]}]},"goal":{"ball":9,"pocket":"top-left"}},{"html":"First, we need to make sure you are seeing the table as you would in real life. Let's configure the simulator to match your physical height.","action":"set-height"},{"html":"Experts recommend aiming shots while standing upright, before you get down into a shooting stance.  This gives you the best view of the table and avoid many optical illusions that occur when you are low to the table."},{"html":"MillionBalls mimics this real-life action.  When preparing to shoot, you'll move from side-to-side around the cue ball to find the right line of aim to the object ball."},{"html":"The movement controls are enabled now enabled now.  Use the left and right arrow keys to move around. Press and hold them to move faster. Tap them to make small adjustments.","enableControls":["move"],"action":"move"},{"html":"Good players aim while standing up.  When they are ready to shoot they drop down into a shooting stance and place the cue directly along the line of aim."},{"html":"When you are ready, press the <strong>spacebar</strong> or <strong>C</strong> to get down.  Don't worry if you are unsure of the aim.  We'll cover that in a future tutorial.","enableControls":["move","get-down"],"action":"get-down"},{"html":"You can use make fine adjustments to your aim by pressing the left and right keys while down. Try it now.","action":"adjust-grip","enableControls":["move","get-down","fine-aim"]},{"html":"It's inadvisable to make large adjustments while down in the shooting stance.  Press the <strong>C</strong> key to get back up to make larger aim adjustments.  Try it now.","action":"stand-up","enableControls":["get-down","fine-aim","stand-up"]},{"html":"Now, try to aim and get down on this shot to make the ball. Again, don't worry if you're unsure of the aim.  In this tutorial we're just learning the controls.","action":"get-down","enableControls":["move","get-down","fine-aim"]},{"html":"When you are ready, hit the <strong>spacebar</strong> to shoot.","enableControls":["move","get-down","stand-up","fine-aim","shoot"],"action":"shoot"},{"html":"When you are practicing, you can always press <strong>?</strong> to get help with the keyboard controls.  Press ? again to close it. Try it now."},{"html":"<h1>Review</h1>This concludes the tutorial on basic keyboard controls. <ul><li>You learned to move around and aim shots while standing up.</li><li>You learned to fine-tune your aim</li><li>You learned to get back up to make large adjustments to your aim</li><li>You learned how to shoot a basic shot</li><li>You learned to bring up the help screen on keyboard shortcuts</li></ul>"}]},"aiming-basics":{"steps":[{"html":"<h1>Prerequisites</h1><p>In this tutorial we assume you are already familiar with basic terminology and the movement and shooting controls.  If not, review these tutorials first:</p><ul><li><a href=\"basic-concepts\">Basic pool concepts and terminology</a></li><li><a href=\"touchscreen-basics\">Touchscreen controls</a></li><li><a href=\"keyboard-basics\">Keyboard controls</a></li></ul>","layout":{"unit":"in","balls":[{"type":"cue_ball","position":[8.5,25]},{"type":1,"position":[-12.5,24]}]},"goal":{"ball":1,"pocket":"top-left"}},{"html":"First, let's learn to control the direction of the object ball.  For now, we aren't aiming at anything in particular.  The translucent image of the cue ball shows where the cue ball would strike the object ball. Move around and see how cut angle changes as you adjust where the cue ball strikes the object ball.","show":["preview"],"action":"move","enableControls":["move"]},{"html":"You'll notice that the object ball goes to the left if the cue ball hits the right side of center, and vice versa.  The more off-center the hit, the more the object ball will deflect.  Try it, and press &quot;Next&quot; when you're ready to continue.","show":["preview"],"enableControls":["move"]},{"html":"Did you notice that object ball travels along the line between the centers of the  translucent cue ball and the initial position of the object ball? This is called the <strong>ghost ball</strong> aiming method.  Although it isn't <i>perfectly</i> accurate because of friction and other effects, the ghost ball aiming method is good enough for most shots.","show":["preview"],"enableControls":["move"]},{"html":"Let's try a real show now. Make the 1-ball into the designated pocket.  Move around to aim the ball to the pocket, get down and shoot.","layout":{"unit":"in","balls":[{"type":"cue_ball","position":[8.5,25]},{"type":1,"position":[-12.5,43.75]}]},"goal":{"ball":1,"pocket":"top-left"},"show":["target","preview","result"],"enableControls":["all"],"action":"make-ball"},{"html":"Let's make it a bit harder.  I've turned off the shot preview, but left the ghost ball in place.  Aim at the center of the ghost ball and make the ball into the pocket.","resetPosition":true,"enableControls":["all"],"action":"make-ball","show":["target","ghost","result"]},{"html":"Now it's time to take the training wheels off! Imagine the ghost ball in your mind and aim as you would at the table in real life to make the ball.","resetPosition":true,"enableControls":["all"],"action":"make-ball","show":["result"]},{"html":"<h1>Review</h1><p>Congratulations, you've learned the basics of aiming shots.<ul><li>When the cue ball hits the left side of the object ball it cuts the object ball to the right, and vice versa.</li><li>The further off-center the hit, the more the object ball will deflect.</li><li>You can visualize the <i>ghost ball</i> to predict where the object ball will go.</li></ul><p>Although some skills can only be practiced at a pool table, MillionBalls will teach you to <em>visualize</em> shots.  So it's time to do some drills!</p>"}]}};
+function __getFavorites() {
+  try { return JSON.parse(localStorage.getItem('mb_favorites') || '[]'); } catch (e) { return []; }
+}
+function __setFavorites(f) {
+  try { localStorage.setItem('mb_favorites', JSON.stringify(f)); } catch (e) {}
+}
+function __getSessions() {
+  try { return JSON.parse(localStorage.getItem('mb_drill_sessions') || '[]'); } catch (e) { return []; }
+}
+function __saveSession(s) {
+  try {
+    const list = __getSessions();
+    list.unshift(s);
+    localStorage.setItem('mb_drill_sessions', JSON.stringify(list.slice(0, 100)));
+  } catch (e) {}
+}
 async function ol(e, t, n) {
   let i = window.location,
     s = new URL(e, i);
-  (n && (s.search = new URLSearchParams(n).toString()),
-    (t.credentials = "include"),
-    (t.method ?? "GET") !== "GET" &&
-      (t.headers = { "X-CSRFToken": AM("csrftoken") ?? "", ...t.headers }));
+  if (n) s.search = new URLSearchParams(n).toString();
+  const p = s.pathname;
+
+  // Intercept tutorials
+  const tutMatch = p.match(/\/tutorials\/([\w-]+)\.json/);
+  if (tutMatch && __EMBEDDED_TUTORIALS[tutMatch[1]]) {
+    return __EMBEDDED_TUTORIALS[tutMatch[1]];
+  }
+
+  // Intercept /api/ routes
+  if (p.includes('/api/')) {
+    // Session / auth
+    if (p.endsWith('/api/session/') || p.endsWith('/api/session')) {
+      if ((t && t.method ? t.method : 'GET') === 'GET') {
+        const storedUser = localStorage.getItem('mb_user');
+        return storedUser ? JSON.parse(storedUser) : {};
+      }
+      if (t && t.method === 'POST') {
+        let b = {};
+        try { b = JSON.parse((t && t.body) || '{}'); } catch (err) {}
+        const user = { id: 1, username: b.username || 'player', email: b.email || 'player@example.com' };
+        localStorage.setItem('mb_user', JSON.stringify(user));
+        return user;
+      }
+      if (t && t.method === 'DELETE') {
+        localStorage.removeItem('mb_user');
+        return {};
+      }
+    }
+
+    // Favorite actions
+    const favMatch = p.match(/\/api\/drills\/(\d+)\/favorite\/?/);
+    if (favMatch) {
+      const id = parseInt(favMatch[1], 10);
+      let favs = __getFavorites();
+      if (t && t.method === 'POST') {
+        if (!favs.includes(id)) favs.push(id);
+      } else if (t && t.method === 'DELETE') {
+        favs = favs.filter(x => x !== id);
+      }
+      __setFavorites(favs);
+      return {};
+    }
+
+    // Single drill
+    const drillMatch = p.match(/\/api\/drills\/(\d+)\/?$/);
+    if (drillMatch) {
+      const id = parseInt(drillMatch[1], 10);
+      const drill = __EMBEDDED_DRILLS.find(d => d.id === id) || __EMBEDDED_DRILLS[0];
+      const favs = __getFavorites();
+      return { ...drill, favorite: favs.includes(drill.id) };
+    }
+
+    // Drills list
+    if (p.endsWith('/api/drills/') || p.endsWith('/api/drills')) {
+      const favs = __getFavorites();
+      let list = __EMBEDDED_DRILLS.map(d => ({ ...d, favorite: favs.includes(d.id) }));
+      const isFavOnly = s.searchParams.get('favorite') === '1' || (n && (n.favorite === '1' || n.favorite === 1));
+      if (isFavOnly) {
+        list = list.filter(d => d.favorite);
+      }
+      return { count: list.length, limit: 50, offset: 0, next: null, previous: null, results: list };
+    }
+
+    // Drill sessions
+    if (p.includes('/api/drill_session/')) {
+      if (t && t.method === 'POST') {
+        let b = {};
+        try { b = JSON.parse((t && t.body) || '{}'); } catch (err) {}
+        const sess = { id: Date.now(), ...b, completed_at: new Date().toISOString(), achievements: b.achievements || [] };
+        __saveSession(sess);
+        return sess;
+      }
+      const drillId = s.searchParams.get('drill') || (n && n.drill);
+      let sessions = __getSessions();
+      if (drillId) sessions = sessions.filter(sess => String(sess.drill) === String(drillId));
+      return sessions;
+    }
+
+    // Shotlog
+    if (p.includes('/api/shotlog/')) {
+      return { id: Date.now() };
+    }
+
+    // Profiles
+    if (p.includes('/api/profile')) {
+      return { username: 'player', bio: 'Pool Player', followers_count: 0, following_count: 0 };
+    }
+
+    // Catch-all API fallback
+    return {};
+  }
+
+  // Fall through for static assets
+  t.credentials = 'include';
   try {
     let r = await fetch(s, t);
     return TM(r);
@@ -5202,6 +5312,7 @@ async function ol(e, t, n) {
     throw r instanceof TypeError ? new zo(a0, { error: r.message }) : r;
   }
 }
+
 async function EM(e) {
   if (e.status != 204)
     if (e.headers.get("Content-Type") == "application/json")
@@ -5471,7 +5582,7 @@ const lc = [1, 2, 3, 4],
     },
     tutorials: {
       async retrieve(e) {
-        return fe.get(`${window.location.origin}/tutorials/${e}.json`);
+        return fe.get(`./tutorials/${e}.json`);
       },
     },
   },
@@ -36108,7 +36219,7 @@ const aL = {
   room_width: 10 * ui,
   room_length: 10 * ui,
   ceiling_height: 5 * ui,
-  floor_texture: { url: "/assets/checker.png", width: 2 * ui, height: 2 * ui },
+  floor_texture: { url: "./assets/checker.png", width: 2 * ui, height: 2 * ui },
   floor_color: 16777200,
   floor_z: Ry.table_bed_height,
   wall_color: 14540287,
@@ -44348,7 +44459,7 @@ Exception: ${I.message}
     },
   }),
   FF = en(UF, [["__scopeId", "data-v-47e2c2e8"]]),
-  OF = "/assets/logo-light-2Bc_n8-U.svg",
+  OF = "./assets/logo-light-2Bc_n8-U.svg",
   kF = { class: "ps-container home" },
   BF = { class: "ps-menu" },
   zF = { key: 0 },
@@ -49204,7 +49315,7 @@ const jk = ["onClick"],
     },
   }),
   bx = Yw({
-    history: ww(),
+    history: ww("#"),
     routes: [
       { path: "/", redirect: { name: "home" } },
       { path: "/app", component: GF, name: "home" },
