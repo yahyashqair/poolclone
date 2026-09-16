@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aim Trainer — MillionBalls</title>
+  <style>
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #123; color: #eee; }
+    main { max-width: 900px; margin: auto; padding: 1em; }
+    a { color: #7df; }
+    #table { width: 100%; touch-action: none; cursor: crosshair; background: #0a4d2e; border-radius: 8px; }
+    #readout { font-size: 18px; margin: .5em 0; }
+    #readout b { color: #fc0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border: 1px solid #456; padding: .4em; text-align: right; }
+    td:first-child, th:first-child { text-align: left; }
+    .hint { color: #9ab; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="./index.html">← Back to table</a></p>
+    <h1>Ghost-ball + fractions trainer</h1>
+    <p class="hint">Drag cue (white) and object (yellow) balls. Click a pocket to target it. Aim line = cue → ghost. Fraction = visible overlap at contact.</p>
+    <canvas id="table" width="800" height="460"></canvas>
+    <p id="readout"></p>
+    <h1>Drill progress</h1>
+    <p class="hint">Reads your real sessions (<code>mb_drill_sessions</code>) from this browser. Attempts carry <code>ball_pocketed</code> + aim <code>error</code>.</p>
+    <table id="stats">
+      <thead><tr><th>Drill</th><th>Sessions</th><th>Shots</th><th>Made %</th><th>Avg err°</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script type="module" src="/src/trainer.js"></script>
+</body>
+</html>

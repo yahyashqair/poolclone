@@ -8,6 +8,12 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        trainer: 'trainer.html',
+      },
+    },
   },
   server: {
     port: 3000,
