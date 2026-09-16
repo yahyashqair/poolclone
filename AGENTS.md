@@ -10,7 +10,8 @@ Scraped MillionBalls build, serverless. Playable bundle + clean sidecar modules.
 ## Map
 - `index.html` — entry. Loads `/src/main.js` (sidecar) + `./assets/index-C0Zrrk4C.js` (frozen legacy bundle mounts `#app`). Keep both.
 - `assets/` — frozen vendor bundle. DO NOT EDIT.
-- `src/main.js` — agent entry. Exposes `window.__poolclone = { api, storage }`.
+- `src/main.js` — agent entry. Exposes `window.__poolclone = { api, storage }`, adds the trainer link, imports the in-game aim-aid panel.
+- `src/aim-assist.js` — in-game aid panel. Finds the live `SimulatorView` (production Vue hides `app._instance`, so walk `#app._vnode` + `.component`) and toggles the game's OWN props: `showGhost` / `showTarget` / `showShotPreview`. Only user-set toggles are forced (localStorage `mb_aim_aids`), so tutorial steps keep their scripted `show: [...]`.
 - `src/physics/engine.js` — FROZEN vendor, minified names. Tune via `src/physics/constants.js` only.
 - `src/services/api.js` — drills/tutorials/sessions, client-side. Tutorials bundled via `import.meta.glob`; `public/tutorials/*.json` fallback.
 - `src/services/storage.js` — localStorage only.

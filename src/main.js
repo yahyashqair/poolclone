@@ -4,6 +4,7 @@
  */
 import { api } from './services/api.js';
 import { storage } from './services/storage.js';
+import './aim-assist.js';
 
 export { api, storage };
 export * from './physics/constants.js';
