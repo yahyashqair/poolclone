@@ -2,35 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aim Trainer — MillionBalls</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aim trainer 3D — MillionBalls</title>
   <style>
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #123; color: #eee; }
-    main { max-width: 900px; margin: auto; padding: 1em; }
-    a { color: #7df; }
-    #table { width: 100%; touch-action: none; cursor: crosshair; background: #0a4d2e; border-radius: 8px; }
-    #readout { font-size: 18px; margin: .5em 0; }
-    #readout b { color: #fc0; }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th, td { border: 1px solid #456; padding: .4em; text-align: right; }
-    td:first-child, th:first-child { text-align: left; }
-    .hint { color: #9ab; font-size: 13px; }
+    :root { --bg:#0e1720; --panel:#16232f; --line:#2b3d4d; --text:#e8eef4; --dim:#8fa3b3; --yellow:#ffc62b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:14px/1.45 Arial,Helvetica,sans-serif; }
+    a { color:#7dd3fc; }
+    header { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; padding:.6rem 1rem; border-bottom:1px solid var(--line); }
+    h1 { font-size:16px; margin:0 0 0 .2rem; }
+    h2 { font-size:14px; margin:0 0 .5rem; }
+    .spacer { flex:1; }
+    .btn { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:.4rem .7rem; cursor:pointer; font-size:13px; }
+    .btn.primary { background:var(--yellow); border-color:var(--yellow); color:#1a1400; font-weight:700; }
+    .btn:disabled { opacity:.4; cursor:not-allowed; }
+    select, input[type=range] { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:.3rem; max-width:230px; }
+    #layout { display:flex; flex-wrap:wrap; gap:1rem; padding:1rem; align-items:flex-start; }
+    #view { flex:1 1 620px; min-width:300px; height:min(64vh,620px); background:#0b1117; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+    #view canvas { display:block; }
+    aside { flex:0 1 330px; min-width:270px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:.8rem; margin-bottom:1rem; }
+    .row { display:flex; justify-content:space-between; gap:.5rem; padding:.15rem 0; }
+    .row b { color:var(--yellow); font-variant-numeric:tabular-nums; }
+    .made { color:#4ade80; } .miss { color:#f87171; }
+    .hint { color:var(--dim); font-size:12px; }
+    table { width:100%; border-collapse:collapse; font-size:12.5px; }
+    th,td { border-bottom:1px solid var(--line); padding:.28rem .35rem; text-align:right; }
+    th:first-child, td:first-child { text-align:left; }
+    footer { padding:0 1rem 2rem; }
+    kbd { background:#0b1117; border:1px solid var(--line); border-radius:4px; padding:0 .3rem; font-size:11px; }
   </style>
 </head>
 <body>
-  <main>
-    <p><a href="./index.html">← Back to table</a></p>
-    <h1>Ghost-ball + fractions trainer</h1>
-    <p class="hint">Drag cue (white) and object (yellow) balls. Click a pocket to target it. Aim line = cue → ghost. Fraction = visible overlap at contact.</p>
-    <canvas id="table" width="800" height="460"></canvas>
-    <p id="readout"></p>
-    <h1>Drill progress</h1>
-    <p class="hint">Reads your real sessions (<code>mb_drill_sessions</code>) from this browser. Attempts carry <code>ball_pocketed</code> + aim <code>error</code>.</p>
-    <table id="stats">
-      <thead><tr><th>Drill</th><th>Sessions</th><th>Shots</th><th>Made %</th><th>Avg err°</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </main>
-  <script type="module" src="/src/trainer.js"></script>
+<header>
+  <a href="./index.html">← Table</a>
+  <h1>Aim trainer</h1>
+  <select id="drill" title="Load a drill layout"></select>
+  <label class="hint">Speed <input id="speed" type="range" min="0.5" max="4.5" step="0.1" value="1.5"> <span id="speed-out">1.5</span> m/s</label>
+  <span class="spacer"></span>
+  <button class="btn" id="cam-behind">Behind cue</button>
+  <button class="btn" id="cam-top">Top</button>
+  <button class="btn" id="ghost">Ghost on</button>
+  <button class="btn" id="aim-ghost">Aim at ghost</button>
+  <button class="btn primary" id="shoot">Shoot (space)</button>
+  <button class="btn" id="reset">Reset (R)</button>
+</header>
+<div id="layout">
+  <div id="view"></div>
+  <aside>
+    <div class="card">
+      <div class="row"><span>Cut angle</span><b id="out-cut">–</b></div>
+      <div class="row"><span>Overlap</span><b id="out-frac">–</b></div>
+      <div class="row"><span>Fraction ref</span><b id="out-ref">–</b></div>
+      <div class="row"><span>Aim direction</span><b id="out-aim">–</b></div>
+      <div class="row"><span>Target pocket</span><b id="out-target">–</b></div>
+      <div class="row"><span>Result</span><b id="out-result">–</b></div>
+      <p class="hint" id="out-detail"></p>
+      <p class="hint">Left-drag ball = move · left-drag cloth = aim · click pocket = target · right-drag = orbit · wheel = zoom · <kbd>←</kbd><kbd>→</kbd> fine aim (<kbd>shift</kbd> ×5)</p>
+    </div>
+    <div class="card">
+      <div class="row"><span>This trainer session</span><b id="summary">0 / 0</b></div>
+      <table>
+        <thead><tr><th>#</th><th>Cut°</th><th>Overlap</th><th>Result</th></tr></thead>
+        <tbody id="log"></tbody>
+      </table>
+    </div>
+  </aside>
+</div>
+<footer>
+  <h2>Drill progress <span class="hint">— sessions logged by the game itself</span></h2>
+  <table>
+    <thead><tr><th>Drill</th><th>Sessions</th><th>Shots</th><th>Made %</th><th>Avg err°</th></tr></thead>
+    <tbody id="stats"></tbody>
+  </table>
+</footer>
+<script type="module" src="/src/trainer.js"></script>
 </body>
 </html>

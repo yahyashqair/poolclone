@@ -16,7 +16,8 @@ Scraped MillionBalls build, serverless. Playable bundle + clean sidecar modules.
 - `src/services/storage.js` — localStorage only.
 - `src/graphics/`, `src/data/` — safe to edit. `src/components/`, `src/views/` empty (no Vue source extracted).
 - `server.js` — local `dist/` preview only.
-- `trainer.html` + `src/trainer.js` — aim trainer page (ghost/fraction visualizer + drill dashboard). Reads live pocket geometry from `Simulator`; sessions from `storage` (`mb_drill_sessions`: `{drill, attempts:[{ball_pocketed, error, first_hit_object}]}`). Multi-page build via `vite.config.js` input.
+- `trainer.html` + `src/trainer.js` — 3D aim trainer (three.js). Ghost ball + fractions, drag balls/pockets, loads `src/data/drills.json` layouts, and `Shoot` runs the real engine simulation (`sim.cue` + `sim.shoot()`) and reports pot/miss + throw. Sessions from `storage` (`mb_drill_sessions`: `{drill, attempts:[{ball_pocketed, error, first_hit_object}]}`). Multi-page build via `vite.config.js` input.
+- Engine gap: `engine.js` has no `He` binding, so `placeCue()`/`findGhostBallPosition()` throw. Set `sim.cue.position` / `sim.cue.axis` and call `shoot()` instead.
 
 ## Rules
 - Never hand-edit `assets/*`, `dist/*`, `engine.js`.
