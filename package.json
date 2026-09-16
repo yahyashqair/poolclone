@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "description": "MillionBalls pool simulator clone with memory leak fixes",
-  "main": "server.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

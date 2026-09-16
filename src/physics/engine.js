@@ -1,15 +1,8 @@
 /**
- * Billiard Physics Simulation Engine
- * 
- * Accurately models real-world pool physics:
- * - Rigid body dynamics with continuous collision detection (CCD)
- * - Two-phase friction transition (Coulomb sliding friction to pure rolling)
- * - Cut-induced throw and ball-ball dynamic friction
- * - Cushion bounce with non-linear rail restitution and vertical bounce damping
- * - Spin, draw, follow, and english with cue deflection/squirt
- * - Pocket entrance geometry and ball drop dynamics
- * 
- * Units: Standard SI (meters, kg, seconds, radians)
+ * Billiard Physics Simulation Engine — FROZEN VENDOR COPY. DO NOT EDIT.
+ * Extracted from legacy bundle; minified identifiers kept as-is.
+ * Tune via ./constants.js or wrappers, never here.
+ * Public surface: named exports + default at file end (Simulator, Ball, Cue, ...).
  */
 
 import { Vector2, Vector3, Quaternion, Matrix4 } from 'three';

@@ -6,6 +6,9 @@
 import drillsData from '../data/drills.json';
 import { storage } from './storage.js';
 
+// Bundled at build time; works under Pages subpath. Keys: ../data/tutorials/<name>.json
+const tutorialModules = import.meta.glob('../data/tutorials/*.json', { eager: true });
+
 export const api = {
   /**
    * Retrieves all available drills, optionally filtered by favorites.
@@ -59,16 +62,16 @@ export const api = {
    * Retrieves a tutorial step-by-step lesson by name.
    */
   async getTutorial(name) {
-    try {
-      const response = await fetch(`./tutorials/${name}.json`);
-      if (response.ok) {
-        return await response.json();
-      }
-    } catch {}
+    const key = `../data/tutorials/${name}.json`;
+    if (tutorialModules[key]) {
+      const mod = tutorialModules[key];
+      return mod.default || mod;
+    }
 
-    // Fallback: dynamic import if fetch fails
-    const tutModule = await import(`../data/tutorials/${name}.json`);
-    return tutModule.default || tutModule;
+    // Fallback: public/ copy for dev-added files not yet bundled
+    const response = await fetch(`${import.meta.env.BASE_URL}tutorials/${name}.json`);
+    if (!response.ok) throw new Error(`Tutorial ${name} not found`);
+    return await response.json();
   },
 
   /**

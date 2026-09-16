@@ -1,0 +1,24 @@
+# AGENTS.md — poolclone
+
+## What this is
+Scraped MillionBalls build, serverless. Playable bundle + clean sidecar modules. No backend. Deploy: push to main → Actions runs `npm run build` → `dist/` → Pages.
+
+## Run
+- `npm install`, `npm run dev` (Vite, port 3000)
+- `npm run build && npm start` (preview `dist/`, no server needed on Pages)
+
+## Map
+- `index.html` — entry. Loads `/src/main.js` (sidecar) + `./assets/index-C0Zrrk4C.js` (frozen legacy bundle mounts `#app`). Keep both.
+- `assets/` — frozen vendor bundle. DO NOT EDIT.
+- `src/main.js` — agent entry. Exposes `window.__poolclone = { api, storage }`.
+- `src/physics/engine.js` — FROZEN vendor, minified names. Tune via `src/physics/constants.js` only.
+- `src/services/api.js` — drills/tutorials/sessions, client-side. Tutorials bundled via `import.meta.glob`; `public/tutorials/*.json` fallback.
+- `src/services/storage.js` — localStorage only.
+- `src/graphics/`, `src/data/` — safe to edit. `src/components/`, `src/views/` empty (no Vue source extracted).
+- `server.js` — local `dist/` preview only.
+
+## Rules
+- Never hand-edit `assets/*`, `dist/*`, `engine.js`.
+- New tutorial JSON goes in BOTH `src/data/tutorials/` and `public/tutorials/` (same filename).
+- Drills schema: see `src/data/drills.json`.
+- Base must stay `'./'` in `vite.config.js` (Pages subpath).
